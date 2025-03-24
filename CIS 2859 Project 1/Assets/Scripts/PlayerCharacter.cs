@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public int health = 25;
+    public int PlayerHealth = 25;
     public GameObject bulletPrefab;
     public GameObject bulletSpawn;
     public float fireRate = 0.1f;
     private float nextFireTime;
-    private bool isAlive = true;
+    public bool isAlive = true;
 
-    private void Update()
+    public void Update()
     {
         if (!isAlive) return;
 
-        if (health <= 0)
+        if (PlayerHealth <= 0)
         {
             Die();
         }
@@ -34,7 +34,7 @@ public class PlayerCharacter : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        PlayerHealth -= damage;
     }
 
     private void Die()
@@ -45,10 +45,5 @@ public class PlayerCharacter : MonoBehaviour
         PlayerMovement movement = GetComponent<PlayerMovement>();
         if (movement != null) movement.enabled = false;
 
-        EnemyStats[] enemies = FindObjectsOfType<EnemyStats>();
-        foreach (var enemy in enemies)
-        {
-            enemy.StopChasing();
-        }
     }
 }

@@ -13,7 +13,7 @@ public class HealthPickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerCharacter player = other.GetComponent<PlayerCharacter>();
-            player.health += healthGain;
+            player.PlayerHealth += healthGain;
             Destroy(this.gameObject);
         }
     }

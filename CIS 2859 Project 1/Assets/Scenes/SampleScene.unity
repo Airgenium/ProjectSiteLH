@@ -3799,10 +3799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79c5495dcc81c0c4593cb71fe00e8c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  PlayerHealth: 25
   bulletPrefab: {fileID: 7516600231683099352, guid: e3eb93a0f4dd17446ba8ecb9941c76c5, type: 3}
   bulletSpawn: {fileID: 1187380700}
   fireRate: 0.1
+  isAlive: 1
 --- !u!1 &1823001061
 GameObject:
   m_ObjectHideFlags: 0

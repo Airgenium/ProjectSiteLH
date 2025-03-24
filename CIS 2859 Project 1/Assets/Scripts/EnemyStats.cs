@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 public class EnemyStats : MonoBehaviour
 {
-    public int health = 1;
+    public int health;
     public GameObject bulletPrefab;
     public GameObject enemyBulletSpawn;
     WaveManager waveManager;
@@ -12,7 +12,7 @@ public class EnemyStats : MonoBehaviour
     public float fireRate = 1f;
 
     private float nextFireTime;
-    private bool isChasing = true;
+    private bool isAlive = true;
 
     void Start()
     {    
@@ -22,7 +22,7 @@ public class EnemyStats : MonoBehaviour
 
     void Update()
     {
-        if (isChasing)
+        if (isAlive)
         {
             GetComponent<WanderingAI>();
         }
@@ -61,9 +61,5 @@ public class EnemyStats : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Instantiate(blueSpherePrefab, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
-    }
-    public void StopChasing()
-    {
-        isChasing = false; // Stop the enemy from chasing the player
     }
 }
