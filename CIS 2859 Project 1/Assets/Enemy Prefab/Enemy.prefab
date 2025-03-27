@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba23ec0a99eecc54394efdd28112062a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
   bulletPrefab: {fileID: 6179648528971508074, guid: c0b786566a3f80a4f9935c1ad8fab8d6, type: 3}
   enemyBulletSpawn: {fileID: 688903320293401801}
   blueSpherePrefab: {fileID: 7620282739923675165, guid: 4f472bbaa5dba6249aeb15f20f86e97f, type: 3}
